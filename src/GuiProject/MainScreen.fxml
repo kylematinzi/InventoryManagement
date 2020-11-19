@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="434.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiProject.MainScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1cfcf" height="428.0" layoutX="2.0" layoutY="2.0" stroke="GREY" strokeType="INSIDE" width="746.0" />
+      <Label layoutX="153.0" layoutY="24.0" prefHeight="53.0" prefWidth="443.0" text="Inventory Management System" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e3e8" height="260.0" layoutX="14.0" layoutY="108.0" stroke="#979595" strokeType="INSIDE" width="350.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e3e8" height="260.0" layoutX="386.0" layoutY="108.0" stroke="#979595" strokeType="INSIDE" width="350.0" />
+      <Label layoutX="52.0" layoutY="129.0" text="PARTS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="129.0" text="PRODUCTS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="partSearchButton" layoutX="137.0" layoutY="126.0" mnemonicParsing="false" onAction="#partSearchButtonPressed" text="Search" />
+      <Button fx:id="productSearchButton" layoutX="509.0" layoutY="126.0" mnemonicParsing="false" onAction="#productSearchButtonPressed" text="Search" />
+      <TextField fx:id="partSearchBox" layoutX="201.0" layoutY="126.0" promptText="Part Name or ID" />
+      <TextField fx:id="productSearchBox" layoutX="574.0" layoutY="126.0" onAction="#productSearchButtonPressed" promptText="Product Name or ID" />
+      <Button fx:id="addPartButton" layoutX="58.0" layoutY="330.0" mnemonicParsing="false" onAction="#addPartButtonPressed" prefWidth="75.0" text="Add" />
+      <Button fx:id="modifyPartButton" layoutX="150.0" layoutY="330.0" mnemonicParsing="false" onAction="#modifyPartButtonPressed" prefWidth="75.0" text="Modify" />
+      <Button fx:id="deletePartButton" layoutX="240.0" layoutY="330.0" mnemonicParsing="false" onAction="#deletePartButtonPressed" prefWidth="75.0" text="Delete" />
+      <Button fx:id="addProductButton" layoutX="433.0" layoutY="330.0" mnemonicParsing="false" onAction="#addProductButtonPressed" prefWidth="75.0" text="Add" />
+      <Button fx:id="modifyProductButton" layoutX="523.0" layoutY="330.0" mnemonicParsing="false" onAction="#modifyProductButtonPressed" prefWidth="75.0" text="Modify" />
+      <Button fx:id="deleteProductButton" layoutX="613.0" layoutY="330.0" mnemonicParsing="false" onAction="#deleteProductButtonPressed" prefWidth="75.0" text="Delete" />
+      <Button fx:id="exitButton" layoutX="660.0" layoutY="394.0" mnemonicParsing="false" onAction="#exitButtonPressed" prefWidth="75.0" text="Exit" />
+      <TableView fx:id="partTableView" layoutX="20.0" layoutY="165.0" prefHeight="145.0" prefWidth="337.0">
+        <columns>
+          <TableColumn fx:id="partId" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="partName" prefWidth="91.3333511352539" text="Part Name" />
+            <TableColumn fx:id="partInventory" prefWidth="80.66667175292969" text="Inv Level" />
+            <TableColumn fx:id="partPrice" prefWidth="88.66667683919269" text="Price Per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="productTableView" layoutX="392.0" layoutY="165.0" prefHeight="145.0" prefWidth="337.0">
+         <columns>
+            <TableColumn fx:id="productId" prefWidth="75.0" text="Product ID" />
+            <TableColumn fx:id="productName" prefWidth="90.33331298828125" text="Product Name" />
+            <TableColumn fx:id="productInventory" prefWidth="81.6666259765625" text="Inv. Level " />
+            <TableColumn fx:id="productPrice" prefWidth="88.66667683919269" text="Price Per Unit" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
